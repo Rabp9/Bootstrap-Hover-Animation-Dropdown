@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Bootstrap hover animation dropdown</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="../bower_components/animate.css/animate.min.css" />
+    </head>
+    <body ng-app="bootstrapHoverAnimationDropdown">
+        <div class="container" ng-controller="DemoCtrl">
+            <div>
+                <h1>Bootstrap Hover Animation Dropdown</h1>
+                <p>Dropdown menu for navbar and others.</p>
+                <p><a class="btn btn-primary btn-lg" href="#" role="button">Git Hub</a></p>
+            </div>
+            <div class="row">
+                <div class="col-sm-6">
+                    <h2>With Hover</h2>
+                    <hr>
+                    <label>Animation In for Hover Dropdown
+                        <select ng-model="animationInHover" ng-options="effect.name as effect.name group by effect.type for effect in effects">
+                        </select>
+                    </label><br/>
+                    <label>Animation Out for Hover Dropdown
+                        <select ng-model="animationOutHover" ng-options="effect.name as effect.name group by effect.type for effect in effects">
+                        </select>
+                    </label><br/>
+                    <div class="dropdown" bs-hover-dropdown animation-in="animationInHover" animation-out="animationOutHover">
+                        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                            Dropdown With Hover
+                            <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                            <li><a href="#">Action</a></li>
+                            <li><a href="#">Another action</a></li>
+                            <li><a href="#">Something else here</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="#">Separated link</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <h2>Without Hover</h2>
+                    <hr>
+                    <label>Animation In for Whitout Hover Dropdown
+                        <select ng-model="animationInWhitoutHover" ng-options="effect.name as effect.name group by effect.type for effect in effects">
+                        </select>
+                    </label><br/>
+                    <label>Animation Out for Whitout Hover Dropdown
+                        <select ng-model="animationOutWhitoutHover" ng-options="effect.name as effect.name group by effect.type for effect in effects">
+                        </select>
+                    </label><br/>
+                    <div class="dropdown" bs-hover-dropdown animation-in="animationInWhitoutHover" animation-out="animationOutWhitoutHover" bs-hover="false">
+                        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                            Dropdown Without Hover
+                            <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                            <li><a href="#">Action</a></li>
+                            <li><a href="#">Another action</a></li>
+                            <li><a href="#">Something else here</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="#">Separated link</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <script src="../bower_components/jquery/dist/jquery.min.js"></script>
+        <script src="../bower_components/angular/angular.min.js"></script>
+        <script src="../bower_components/bootstrap/dist/js/bootstrap.js"></script>
+        <script src="scripts/bootstrap-hover-animation-dropdown.js.js"></script>
+        
+        <script src="scripts/app.js"></script>
+        <script src="scripts/controllers/demo.js"></script>
+    </body>
+</html>

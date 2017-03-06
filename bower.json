@@ -1,0 +1,17 @@
+{
+    "name": "bootstrap-hover-animation-dropdown",
+    "version": "0.3.0",
+    "license" : "MIT",
+    "main": "dist/bower-hover-animation-dropdown.js",
+    "homepage": "https://github.com/daneden/animate.css",
+    "ignore": [
+        "bower_components"
+    ],
+    "dependencies": {
+        "animate-css":"3.5.2",
+        "angular": "1.6.2",
+        "animate.css": "animate-css#3.5.2",
+        "bootstrap": "3.3.7"
+    },
+    "devDependencies": {}
+}
