@@ -26,7 +26,7 @@ bower install bootstrap-hover-animation-dropdown --save
         <script src="js/jquery.js"></script>
         <script src="js/angular.js"></script>
         <script src="js/bootstrap.js"></script>
-        <script src="js/bootstrap-hover-animation-dropdown.js.js"></script>
+        <script src="js/bootstrap-hover-animation-dropdown.js"></script>
   </body>
   ```
 3. Add the attributes in to your dropdown:
