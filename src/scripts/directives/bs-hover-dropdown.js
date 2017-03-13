@@ -1,13 +1,15 @@
 'use strict';
 
 /**
- * @ngdoc directive
- * @name bootstrapHoverAnimationDropdown.directive:bsHoverDropdown
+ * @ngdoc overview
+ * @name bootstrapHoverAnimationDropdown
  * @description
- * # bsHoverDropdown
+ * # bootstrapHoverAnimationDropdownApp
+ *
+ * Main module of the application.
  */
 angular
-.module('bootstrapHoverAnimationDropdown')
+.module('bootstrapHoverAnimationDropdown', [])
 .directive('bsHoverDropdown', function () {
     return {
         restrict: 'A',
@@ -21,17 +23,15 @@ angular
                 var animationIn = scope.animationIn;
                 var animationOut = scope.animationOut;
                 var hover = attrs.bsHover || true;
-                
-                console.log(animationIn);
-                console.log(animationOut);
+                var toogleElement = element.find('button');
                 
                 if (hover === true) {
-                    element.find('button').hover(
+                    toogleElement.hover(
                         function() {
-                            element.find('button').trigger('click.bs.dropdown');
+                            toogleElement.trigger('click.bs.dropdown');
                         }, function() {
                             if (element.attr('class') !== 'dropdown') {
-                                element.find('button').trigger('click.bs.dropdown');
+                                toogleElement.trigger('click.bs.dropdown');
                             }
                         })
                 }
