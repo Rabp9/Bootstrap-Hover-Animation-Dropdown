@@ -23,7 +23,7 @@ angular
                 var animationIn = scope.animationIn;
                 var animationOut = scope.animationOut;
                 var hover = attrs.bsHover || true;
-                var toogleElement = element.find('button');
+                var toogleElement = element.find('.dropdown-toggle');
                 
                 if (hover === true) {
                     toogleElement.hover(
